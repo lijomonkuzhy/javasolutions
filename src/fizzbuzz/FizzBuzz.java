@@ -13,19 +13,19 @@ public class FizzBuzz {
 	 * Create a number list by replacing multiples of 3 with Fizz, 5 with Buzz
 	 * and 15 with FizzBuzz.
 	 */
-	public List<String> fizzBuzzBuilder(int num) {
+	public List<String> fizzBuzzBuilder(final int num) {
 		List<String> fizzBuzzList = new ArrayList<String>();
 
 		for (int i = 1; i <= num; i++) {
-			String fizzBuzz = null;
-			fizzBuzz = replaceNumberWithWord(i, 3, "Fizz")
+
+			final String fizzBuzz = replaceNumberWithWord(i, 3, "Fizz")
 					+ replaceNumberWithWord(i, 5, "Buzz");
 
 			if (fizzBuzz.isEmpty()) {
-				fizzBuzz = i + "";
+				fizzBuzzList.add(Integer.toString(i));
+			} else {
+				fizzBuzzList.add(fizzBuzz);
 			}
-
-			fizzBuzzList.add(fizzBuzz);
 
 		}
 
