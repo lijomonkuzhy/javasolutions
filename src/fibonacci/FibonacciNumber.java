@@ -11,7 +11,7 @@ public class FibonacciNumber {
 	/*
 	 * returns Nth value of the Fibonacci sequence of given number.
 	 */
-	public int fibonacciValue(int num) {
+	public int fibonacciValue(final int num) {
 		Map<Integer, Integer> fibonacciMap = new HashMap<Integer, Integer>();
 		if (fibonacciMap.containsKey(num)) {
 			return fibonacciMap.get(num);
